@@ -1,6 +1,6 @@
 package Geometria3D;
 
-public class prisma {
+public abstract class prisma {
     double perimetroBase, alturaPri, areaBase, areaPri, volumenPri, apotemaL;
 
     public prisma(double perimetroBase, double alturaPri, double areaBase, double areaPri, double volumenPri, double apotemaL) {
@@ -59,4 +59,8 @@ public class prisma {
     public void setApotemaL(double apotemaL) {
         this.apotemaL = apotemaL;
     }
+
+    public abstract void CalcularArea();
+
+    public abstract void CalcularVolumen();
 }

@@ -1,6 +1,6 @@
 package geometria2D;
 
-public class hexagono {
+public abstract class hexagono {
     double lHex, perimetroHex, apotemaHex, areaHex;
 
     public hexagono(double lHex, double perimetroHex, double apotemaHex, double areaHex) {
@@ -41,4 +41,8 @@ public class hexagono {
     public void setAreaHex(double areaHex) {
         this.areaHex = areaHex;
     }
+
+    public abstract void CalcularArea();
+
+    public abstract void CalcularPerimetro();
 }

@@ -1,24 +1,35 @@
 package Geometria3D;
 
-import Geometria3D.*;
 import java.lang.*;
 import java.util.Scanner;
 
-public class volumenAreaCilindro {
+public class volumenAreaCilindro extends cilindro {
     Scanner entrada = new Scanner(System.in);
-    double pi = 3.2426;
+    double pi = 3.1416;
+
+    public volumenAreaCilindro(double alturaCil, double radioCil, double areaCil, double volumenCil) {
+        super(alturaCil, radioCil, areaCil, volumenCil);
+        CalcularVolumen();
+        CalcularArea();
+    }
+    @Override
+    public void CalcularArea(){
+        areaCil = 2*pi*radioCil*(alturaCil+radioCil);
+    }
+    @Override
+    public void CalcularVolumen(){
+        volumenCil = (pi*(radioCil*radioCil))*alturaCil;
+    }
     //Solicitud de datos mediante metodos
     public void mostrarCilindro(){
-        double radio, area, volumen, altura;
         System.out.print("Ingrese el radio del cilindro:");
-        radio = entrada.nextDouble();
+        radioCil = entrada.nextDouble();
         System.out.print("Ingrese la altura del cilindro:");
-        altura = entrada.nextDouble();
-        area = 2*pi*radio*(altura+radio);
-        volumen = (pi*(radio*radio))*altura;
-        cilindro miCilindro = new cilindro(altura,radio,area,volumen);
+        alturaCil = entrada.nextDouble();
+        CalcularArea();
+        CalcularVolumen();
         System.out.println("---DATOS DEL CILINDRO---");
-        System.out.println("El volumen del cilindor es es: " + miCilindro.getVolumenCil());
-        System.out.println("El area del cilindor es: " + miCilindro.getAreaCil());
+        System.out.println("El volumen del cilindor es es: " + getVolumenCil());
+        System.out.println("El area del cilindor es: " + getAreaCil());
     }
 }

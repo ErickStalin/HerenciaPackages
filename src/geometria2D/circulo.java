@@ -1,5 +1,5 @@
 package geometria2D;
-public class circulo {
+public abstract class circulo {
     double radioCir, perimetroCir, areaCir;
 
     public circulo(double radioCir, double perimetroCir, double areaCir) {
@@ -32,5 +32,9 @@ public class circulo {
     public void setAreaCir(double areaCir) {
         this.areaCir = areaCir;
     }
+
+    public abstract void CalcularArea();
+
+    public abstract void CalcularPerimetro();
 }
 

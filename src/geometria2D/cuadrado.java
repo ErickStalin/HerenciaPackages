@@ -1,5 +1,5 @@
 package geometria2D;
-public class cuadrado {
+public abstract class cuadrado {
     double lCua, areaCua, perimetroCua;
 
     public cuadrado(double lCua, double areaCua, double perimetroCua) {
@@ -32,4 +32,7 @@ public class cuadrado {
         this.perimetroCua = perimetroCua;
     }
 
+    public abstract void CalcularArea();
+
+    public abstract void CalcularPerimetro();
 }

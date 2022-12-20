@@ -1,28 +1,40 @@
 package geometria2D;
 
-import geometria2D.*;
 import java.lang.*;
 import java.util.Scanner;
 
-public class perimetroAreaTriangulo {
+public class perimetroAreaTriangulo extends triangulo {
     Scanner entrada = new Scanner(System.in);
     double pi = 3.1416;
+
+    public perimetroAreaTriangulo(double lTri, double lTri2, double baseTri, double alturaTri, double areaTri, double periTri) {
+        super(lTri, lTri2, baseTri, alturaTri, areaTri, periTri);
+        CalcularArea();
+        CalcularPerimetro();
+    }
+    @Override
+    public void CalcularArea(){
+        areaTri= (baseTri*alturaTri)/2;
+    }
+    @Override
+    public void CalcularPerimetro(){
+        periTri = baseTri+lTri+lTri2;
+    }
     //Solicitud de datos mediante metodos
     public void mostrarTriangulo(){
-        double lado, lado2, base, altura, area ,perimetro;
+
         System.out.print("Ingrese el lado 1 del triangulo:");
-        lado = entrada.nextDouble();
+        lTri = entrada.nextDouble();
         System.out.print("Ingrese el lado 2 del triangulo:");
-        lado2 = entrada.nextDouble();
+        lTri2 = entrada.nextDouble();
         System.out.print("Ingrese la base del triangulo:");
-        base = entrada.nextDouble();
+        baseTri = entrada.nextDouble();
         System.out.print("Ingrese la altura del triangulo:");
-        altura = entrada.nextDouble();
-        area = base*altura;
-        perimetro = base+lado+lado2;
-        triangulo miTriangulo = new triangulo(lado,lado2,base,altura,area,perimetro);
+        alturaTri = entrada.nextDouble();
+        CalcularPerimetro();
+        CalcularArea();
         System.out.println("---DATOS DEL TRIANGULO---");
-        System.out.println("El perimetro del triangulo es: " + miTriangulo.getPeriTri());
-        System.out.println("El area del triangulo es: " + miTriangulo.getAreaTri());
+        System.out.println("El perimetro del triangulo es: " + getPeriTri());
+        System.out.println("El area del triangulo es: " + getAreaTri());
     }
 }

@@ -4,16 +4,16 @@ import java.lang.*;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        volumenAreaEsfera impEsfera = new volumenAreaEsfera();
-        volumenAreaPrisma impPrisma = new volumenAreaPrisma();
-        volumenAreaCilindro impCilindro = new volumenAreaCilindro();
-        volumenAreaCubo impCubo = new volumenAreaCubo();
-        volumenAreaCono impCono = new volumenAreaCono();
+        volumenAreaEsfera impEsfera = new volumenAreaEsfera(0,0,0);
+        volumenAreaPrisma impPrisma = new volumenAreaPrisma(0,0,0,0,0,0);
+        volumenAreaCilindro impCilindro = new volumenAreaCilindro(0,0,0,0);
+        volumenAreaCubo impCubo = new volumenAreaCubo(0,0,0);
+        volumenAreaCono impCono = new volumenAreaCono(0,0,0,0);
         perimetroAreaCirculo impCirculo = new perimetroAreaCirculo(0,0,0,3.1416);
-        perimetroAreaCuadrado impCuadrado = new perimetroAreaCuadrado();
-        perimetroAreaHexagono impHexagono = new perimetroAreaHexagono();
-        perimetroAreaPentagono impPentagono = new perimetroAreaPentagono();
-        perimetroAreaTriangulo impTriangulo = new perimetroAreaTriangulo();
+        perimetroAreaCuadrado impCuadrado = new perimetroAreaCuadrado(0,0,0);
+        perimetroAreaHexagono impHexagono = new perimetroAreaHexagono(0,0,0,0);
+        perimetroAreaPentagono impPentagono = new perimetroAreaPentagono(0,0,0,0);
+        perimetroAreaTriangulo impTriangulo = new perimetroAreaTriangulo(0,0,0,0,0,0);
 
         escritura es1 = new escritura();
         int op = -1, op2;

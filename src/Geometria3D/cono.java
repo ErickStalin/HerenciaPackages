@@ -1,5 +1,5 @@
 package Geometria3D;
-public class cono {
+public abstract class cono {
     double radioCo, generatrizCO, areaCo,volumenCo;
 
     public cono(double radioCo, double generatrizCO, double areaCo, double volumenCo) {
@@ -41,4 +41,7 @@ public class cono {
         this.volumenCo = volumenCo;
     }
 
+    public abstract void CalcularArea();
+
+    public abstract void CalcularVolumen();
 }

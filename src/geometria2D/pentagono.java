@@ -1,12 +1,12 @@
 package geometria2D;
 
-public class pentagono {
+public abstract class pentagono {
     double lPen, perimetroPen, AreaPen, apotemaPen;
 
     public pentagono(double lPen, double perimetroPen, double areaPen, double apotemaPen) {
         this.lPen = lPen;
         this.perimetroPen = perimetroPen;
-        AreaPen = areaPen;
+        this.AreaPen = areaPen;
         this.apotemaPen = apotemaPen;
     }
 
@@ -41,4 +41,8 @@ public class pentagono {
     public void setApotemaPen(double apotemaPen) {
         this.apotemaPen = apotemaPen;
     }
+
+    public abstract void CalcularArea();
+
+    public abstract void CalcularPerimetro();
 }

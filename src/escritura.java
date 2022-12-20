@@ -4,8 +4,8 @@ public class escritura {
         int op;
         Scanner entrada = new Scanner(System.in);
         System.out.println("---FIGURAS GEOMETRICAS---");
-        System.out.println("1.- Figuras en 3D");
-        System.out.println("2.- Figuras en 2D");
+        System.out.println("1.- Figuras en 2D");
+        System.out.println("2.- Figuras en 3D");
         System.out.println("0.- SALIR");
         System.out.print("Ingrese su respuesta: ");
         op = entrada.nextInt();

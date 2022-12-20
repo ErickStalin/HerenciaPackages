@@ -1,6 +1,6 @@
 package Geometria3D;
 
-public class esfera {
+public abstract class esfera {
     double radioEs, areaEs, volumenEs;
 
     public esfera(double radioEs, double areaEs, double volumenEs) {
@@ -32,4 +32,8 @@ public class esfera {
     public void setVolumenEs(double volumenEs) {
         this.volumenEs = volumenEs;
     }
+
+    public abstract void CalcularArea();
+
+    public abstract void CalcularVolumen();
 }

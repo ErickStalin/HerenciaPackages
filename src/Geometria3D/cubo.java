@@ -1,6 +1,6 @@
 package Geometria3D;
 
-public class cubo {
+public abstract class cubo {
     double lCu, areaCu, volumenCu;
 
     public cubo(double lCu, double areaCu, double volumenCu) {
@@ -32,4 +32,8 @@ public class cubo {
     public void setVolumenCu(double volumenCu) {
         this.volumenCu = volumenCu;
     }
+
+    public abstract void CalcularArea();
+
+    public abstract void CalcularVolumen();
 }

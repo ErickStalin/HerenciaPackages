@@ -1,12 +1,12 @@
 package Geometria3D;
 
-public class cilindro {
+public abstract class cilindro {
     double alturaCil, radioCil, areaCil, volumenCil;
 
     public cilindro(double alturaCil, double radioCil, double areaCil, double volumenCil) {
         this.alturaCil = alturaCil;
         this.radioCil = radioCil;
-        this.areaCil = 2*3.1416*radioCil*(alturaCil+radioCil);
+        this.areaCil = areaCil;
         this.volumenCil = volumenCil;
     }
 
@@ -41,4 +41,8 @@ public class cilindro {
     public void setVolumenCil(double volumenCil) {
         this.volumenCil = volumenCil;
     }
+
+    public abstract void CalcularArea();
+
+    public abstract void CalcularVolumen();
 }

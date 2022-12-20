@@ -1,6 +1,6 @@
 package geometria2D;
 
-public class triangulo {
+public abstract class triangulo {
     double lTri, lTri2, baseTri, alturaTri, areaTri, periTri;
 
     public triangulo(double lTri, double lTri2, double baseTri, double alturaTri, double areaTri, double periTri) {
@@ -59,4 +59,8 @@ public class triangulo {
     public void setPeriTri(double periTri) {
         this.periTri = periTri;
     }
+
+    public abstract void CalcularArea();
+
+    public abstract void CalcularPerimetro();
 }

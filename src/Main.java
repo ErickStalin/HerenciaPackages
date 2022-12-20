@@ -9,7 +9,7 @@ public class Main {
         volumenAreaCilindro impCilindro = new volumenAreaCilindro();
         volumenAreaCubo impCubo = new volumenAreaCubo();
         volumenAreaCono impCono = new volumenAreaCono();
-        perimetroAreaCirculo impCirculo = new perimetroAreaCirculo();
+        perimetroAreaCirculo impCirculo = new perimetroAreaCirculo(0,0,0,3.1416);
         perimetroAreaCuadrado impCuadrado = new perimetroAreaCuadrado();
         perimetroAreaHexagono impHexagono = new perimetroAreaHexagono();
         perimetroAreaPentagono impPentagono = new perimetroAreaPentagono();
